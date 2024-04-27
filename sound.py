@@ -24,6 +24,7 @@ transition = mixer.Sound('transition.wav')
 
 # Main game loop starts here...
 # game loop
+sound_on = True
 def toggle_sound():
     global sound_on
     sound_on = not sound_on
