@@ -163,6 +163,8 @@ class MazeGameLoader:
     def run(self):
         running = True
         backgroundLoading = pygame.image.load('backgroundload.jpg')
+        screen_width = pygame.display.Info().current_w
+        screen_height = pygame.display.Info().current_h
         backgroundLoading = pygame.transform.scale(backgroundLoading, (screen_width, screen_height))
         while running:
             for event in pygame.event.get():
@@ -170,7 +172,7 @@ class MazeGameLoader:
                     running = False
 
             self.screen.fill(Black)
-            self.screen.blit(backgroundLoading,(-80,-20))
+            self.screen.blit(backgroundLoading,(0,-15))
             self.draw_progress_bar()
             self.render_text()
             self.update_loading_tips()
